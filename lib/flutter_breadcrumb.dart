@@ -1,14 +1,6 @@
 library flutter_breadcrumb;
 
-import 'package:flutter/material.dart';
+export 'src/breadcrumb.dart';
+export 'src/breadcrumb_item.dart';
+export 'src/breadcrumb_overflow.dart';
 
-class BreadCrumb extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
-class BreadCrumbItem {
-
-}
