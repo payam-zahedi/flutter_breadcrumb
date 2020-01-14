@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../flutter_breadcrumb.dart';
 
 class BreadCrumb extends StatelessWidget {
@@ -11,9 +10,10 @@ class BreadCrumb extends StatelessWidget {
     Key key,
     @required this.items,
     this.divider,
-    this.overflowType,
+    this.overflowType = BreadCrumbOverflow.wrap,
   })  : assert(items != null, 'items parameters should not be empty'),
         assert(items.length > 0, 'items parameters should not be empty'),
+        assert(overflowType != null, 'overflowType parameter required'),
         super(key: key);
 
   @override
@@ -21,3 +21,5 @@ class BreadCrumb extends StatelessWidget {
     return Container();
   }
 }
+
+
