@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../flutter_breadcrumb.dart';
 
+typedef IndexedBreadCrumbItemBuilder = BreadCrumbItem Function(int index);
+
 class BreadCrumb extends StatelessWidget {
   final List<BreadCrumbItem> items;
   final Widget divider;
