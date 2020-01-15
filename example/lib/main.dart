@@ -18,6 +18,15 @@ class MyApp extends StatelessWidget {
 class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Breadcrump'),
+      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[],
+        ),
+      ),
+    );
   }
 }
