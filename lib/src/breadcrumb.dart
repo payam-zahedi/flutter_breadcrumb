@@ -18,10 +18,23 @@ class BreadCrumb extends StatelessWidget {
         assert(overflowType != null, 'overflowType parameter required'),
         super(key: key);
 
+  factory BreadCrumb.builder({
+    @required int itemCount,
+    @required IndexedBreadCrumbItemBuilder builder,
+    Widget divider,
+    BreadCrumbOverflow overflowType,
+  }) =>
+      BreadCrumb(
+        items: List<BreadCrumbItem>.generate(
+          itemCount,
+          (i) => builder(i),
+        ),
+        divider: divider,
+        overflowType: overflowType,
+      );
+
   @override
   Widget build(BuildContext context) {
     return Container();
   }
 }
-
-
