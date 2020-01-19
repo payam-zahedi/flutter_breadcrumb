@@ -27,38 +27,8 @@ class ExampleApp extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            BreadCrumb(
-              items: [
-                BreadCrumbItem(
-                  content: Text('text'),
-                  onTap: () {},
-                ),
-                BreadCrumbItem(
-                  content: Text('text'),
-                  onTap: () {},
-                ),
-                BreadCrumbItem(
-                  content: Text('text'),
-                  color: Colors.red,
-                  disableColor: Colors.blue,
-                  textColor: Colors.yellow,
-                  padding: EdgeInsets.all(8),
-                  disabledTextColor: Colors.white,
-                  onTap: () {},
-                ),
-                BreadCrumbItem(
-                  color: Colors.red,
-                  disableColor: Colors.blue,
-                  padding: EdgeInsets.all(8),
-                  textColor: Colors.yellow,
-                  disabledTextColor: Colors.white,
-                  content: Text('text'),
-                ),
-              ],
-              divider: Icon(Icons.chevron_right),
-            ),
             BreadCrumb.builder(
-              itemCount: 8,
+              itemCount: 5,
               builder: (index) {
                 return BreadCrumbItem(
                   content: Text('text'),
