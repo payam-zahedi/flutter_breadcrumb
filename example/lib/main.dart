@@ -23,26 +23,63 @@ class ExampleApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter Breadcrump'),
       ),
-      body: Container(
-        child: BreadCrumb(
-          items: [
-            BreadCrumbItem(
-              content: Text('text'),
-              onTap: () {},
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            BreadCrumb(
+              items: [
+                BreadCrumbItem(
+                  content: Text('text'),
+                  onTap: () {},
+                ),
+                BreadCrumbItem(
+                  content: Text('text'),
+                  onTap: () {},
+                ),
+                BreadCrumbItem(
+                  content: Text('text'),
+                  color: Colors.red,
+                  disableColor: Colors.blue,
+                  textColor: Colors.yellow,
+                  padding: EdgeInsets.all(8),
+                  disabledTextColor: Colors.white,
+                  onTap: () {},
+                ),
+                BreadCrumbItem(
+                  color: Colors.red,
+                  disableColor: Colors.blue,
+                  padding: EdgeInsets.all(8),
+                  textColor: Colors.yellow,
+                  disabledTextColor: Colors.white,
+                  content: Text('text'),
+                ),
+              ],
+              divider: Icon(Icons.chevron_right),
             ),
-            BreadCrumbItem(
-              content: Text('text'),
-              onTap: () {},
-            ),
-            BreadCrumbItem(
-              content: Text('text'),
-              onTap: () {},
-            ),
-            BreadCrumbItem(
-              content: Text('text'),
+            BreadCrumb.builder(
+              itemCount: 8,
+              builder: (index) {
+                return BreadCrumbItem(
+                  content: Text('text'),
+                  color: Colors.red,
+                  padding: EdgeInsets.all(8),
+                  borderRadius: BorderRadius.circular(4),
+                  disabledTextColor: Colors.green,
+                  textColor: Colors.yellow,
+                  border: BorderSide(color: Colors.blue),
+                  disableColor: Colors.deepPurple,
+                  splashColor: Colors.blue,
+                  onTap: index % 3 == 0
+                      ? () {
+                          print('item Clicked');
+                        }
+                      : null,
+                );
+              },
+              divider: Icon(Icons.chevron_right),
             ),
           ],
-          divider: Icon(Icons.chevron_right),
         ),
       ),
     );

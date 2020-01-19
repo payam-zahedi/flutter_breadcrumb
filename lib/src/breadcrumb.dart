@@ -22,7 +22,7 @@ class BreadCrumb extends StatelessWidget {
     @required int itemCount,
     @required IndexedBreadCrumbItemBuilder builder,
     Widget divider,
-    BreadCrumbOverflow overflowType,
+    BreadCrumbOverflow overflowType = BreadCrumbOverflow.wrap,
   }) =>
       BreadCrumb(
         items: List<BreadCrumbItem>.generate(
@@ -36,7 +36,7 @@ class BreadCrumb extends StatelessWidget {
   Widget _buildFactory(BreadCrumbOverflow overflowType) {
     switch (overflowType) {
       case BreadCrumbOverflow.wrap:
-        return _WrapBreadCrumb(items: items,divider: divider);
+        return _WrapBreadCrumb(items: items, divider: divider);
         break;
       case BreadCrumbOverflow.ellipsisStart:
         // TODO: Handle this case.
@@ -48,7 +48,7 @@ class BreadCrumb extends StatelessWidget {
         // TODO: Handle this case.
         break;
       default:
-        return _WrapBreadCrumb(items: items,divider: divider);
+        return _WrapBreadCrumb(items: items, divider: divider);
     }
   }
 
@@ -72,17 +72,64 @@ class _WrapBreadCrumb extends StatelessWidget {
     List<Widget> widgetItems;
 
     if (divider != null) {
-      widgetItems=[];
+      widgetItems = [];
       items.forEach((item) {
-        widgetItems.add(item.content);
+        widgetItems.add(
+          _BreadCrumbTile(breadCrumbItem: item),
+        );
         widgetItems.add(divider);
       });
     }
-    widgetItems ??= items.map<Widget>((item) => item.content);
+
+    widgetItems ??= items.map<Widget>(
+      (item) => _BreadCrumbTile(breadCrumbItem: item),
+    );
 
     return Wrap(
       children: widgetItems,
       crossAxisAlignment: WrapCrossAlignment.center,
+      runSpacing: 4,
+    );
+  }
+}
+
+class _BreadCrumbTile extends StatelessWidget {
+  final BreadCrumbItem breadCrumbItem;
+
+  const _BreadCrumbTile({Key key, @required this.breadCrumbItem})
+      : assert(breadCrumbItem != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: breadCrumbItem.margin ?? EdgeInsets.all(0),
+      child: Material(
+        color: breadCrumbItem.isEnable
+            ? breadCrumbItem.color
+            : breadCrumbItem.disableColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: breadCrumbItem.borderRadius,
+          side: breadCrumbItem.border,
+        ),
+        child: InkWell(
+          onTap: breadCrumbItem.onTap,
+          splashColor: breadCrumbItem.splashColor,
+          borderRadius: breadCrumbItem.borderRadius,
+          child: Padding(
+            padding: breadCrumbItem.padding?? EdgeInsets.all(0),
+
+            child: DefaultTextStyle.merge(
+              style: TextStyle(
+                color: breadCrumbItem.isEnable
+                    ? breadCrumbItem.textColor
+                    : breadCrumbItem.disabledTextColor,
+              ),
+              child: breadCrumbItem.content,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
