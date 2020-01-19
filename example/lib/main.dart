@@ -23,34 +23,44 @@ class ExampleApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter Breadcrump'),
       ),
-      body: Center(
-        child: BreadCrumb.builder(
-          itemCount: 12,
-          builder: (index) {
-            return BreadCrumbItem(
-              content: Text('text'),
-              color: Colors.red,
-              padding: EdgeInsets.all(8),
-              borderRadius: BorderRadius.circular(4),
-              disabledTextColor: Colors.green,
-              textColor: Colors.yellow,
-              border: BorderSide(color: Colors.blue),
-              disableColor: Colors.deepPurple,
-              splashColor: Colors.blue,
-              onTap: index % 3 == 0
-                  ? () {
-                      print('item Clicked');
-                    }
-                  : null,
-            );
-          },
-          divider: Icon(Icons.chevron_right),
-          overflowType: WrapOverflow(
-            spacing: 8,
-            runSpacing: 8,
-            alignment: WrapAlignment.center,
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        alignment: Alignment.center,
+        child: BreadCrumb(
+          items: <BreadCrumbItem>[
+            BreadCrumbItem(
+              content: Text(
+                'Docs',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+              onTap: () {},
+              textColor: Colors.blue,
+              disabledTextColor: Colors.grey,
+            ),
+            BreadCrumbItem(
+              content: Text(
+                'Cookbook',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+              onTap: () {},
+              textColor: Colors.blue,
+              disabledTextColor: Colors.grey,
+            ),
+            BreadCrumbItem(
+              content: Text(
+                'Forms',
+                style: TextStyle( fontSize: 16),
+              ),
+              textColor: Colors.blue,
+              disabledTextColor: Colors.grey,
+            ),
+          ],
+          divider: Icon(Icons.chevron_right,color: Colors.grey,),
+          overflow: WrapOverflow(
+            alignment: WrapAlignment.start,
             runAlignment: WrapAlignment.start,
-            direction: Axis.vertical
+            crossAxisAlignment: WrapCrossAlignment.center,
+            direction: Axis.horizontal,
           ),
         ),
       ),
