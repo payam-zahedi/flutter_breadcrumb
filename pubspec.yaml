@@ -4,7 +4,7 @@ version: 0.0.1
 repository: https://github.com/payam-zahedi/flutter_breadcrumb
 issue_tracker: https://github.com/payam-zahedi/flutter_breadcrumb/issues
 homepage: https://github.com/payam-zahedi/flutter_breadcrumb
-author: pzahedi
+author: pzahedi1995@gmail.com
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
