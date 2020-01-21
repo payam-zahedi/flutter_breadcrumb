@@ -1,3 +1,8 @@
-# [0.0.1] - TODO: Add release date.
+# 0.1.0
 
-TODO: Describe initial release.
+Initial version of the package is available
+include below features:
+
+- create breadcrumb with the builder pattern
+- create breadcrumb that is wrappable
+- create breadcrumb that is scrollable
