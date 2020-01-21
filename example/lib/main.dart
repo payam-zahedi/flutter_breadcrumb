@@ -24,44 +24,124 @@ class ExampleApp extends StatelessWidget {
         title: Text('Flutter Breadcrump'),
       ),
       body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         constraints: BoxConstraints.expand(),
         alignment: Alignment.center,
-        child: BreadCrumb(
-          items: <BreadCrumbItem>[
-            BreadCrumbItem(
-              content: Text(
-                'Docs',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text('BreadCrumb with Scrollable Overflow content'),
+            BreadCrumb(
+              items: <BreadCrumbItem>[
+                BreadCrumbItem(
+                  content: Text(
+                    'Flutter Web Site',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Menu',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Docs',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Cookbook',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Forms',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+              ],
+              divider: Icon(
+                Icons.chevron_right,
+                color: Colors.grey,
               ),
-              onTap: () {},
-              textColor: Colors.blue,
-              disabledTextColor: Colors.grey,
+              overflow: ScrollableOverflow(),
             ),
-            BreadCrumbItem(
-              content: Text(
-                'Cookbook',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+
+            SizedBox(height: 12),
+            Text('BreadCrumb with Wrapable Overflow content'),
+            BreadCrumb(
+              items: <BreadCrumbItem>[
+                BreadCrumbItem(
+                  content: Text(
+                    'Flutter Web Site',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Menu',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Docs',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Cookbook',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  onTap: () {},
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+                BreadCrumbItem(
+                  content: Text(
+                    'Forms',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  textColor: Colors.blue,
+                  disabledTextColor: Colors.grey,
+                ),
+              ],
+              divider: Icon(
+                Icons.chevron_right,
+                color: Colors.grey,
               ),
-              onTap: () {},
-              textColor: Colors.blue,
-              disabledTextColor: Colors.grey,
-            ),
-            BreadCrumbItem(
-              content: Text(
-                'Forms',
-                style: TextStyle( fontSize: 16),
-              ),
-              textColor: Colors.blue,
-              disabledTextColor: Colors.grey,
+              overflow: WrapOverflow(),
             ),
           ],
-          divider: Icon(Icons.chevron_right,color: Colors.grey,),
-          overflow: WrapOverflow(
-            alignment: WrapAlignment.start,
-            runAlignment: WrapAlignment.start,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            direction: Axis.horizontal,
-          ),
         ),
       ),
     );
