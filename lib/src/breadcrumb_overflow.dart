@@ -207,12 +207,8 @@ class ScrollableOverflow extends BreadCrumbOverflow {
       primary: primary,
       reverse: reverse,
       child: direction == Axis.horizontal
-          ? Row(
-              children: widgetList,
-            )
-          : Column(
-              children: widgetList,
-            ),
+          ? Row(children: widgetList)
+          : Column(children: widgetList),
     );
   }
 }
