@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
+import 'package:flutter_breadcrumb/src/breadcrumb_widget.dart';
 
 abstract class BreadCrumbOverflow {
   const BreadCrumbOverflow();
