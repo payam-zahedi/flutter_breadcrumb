@@ -299,7 +299,7 @@ class ShowcaseItem extends StatelessWidget {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                    offset: Offset(0, 2), blurRadius: 2, color: Colors.black38)
+                    offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)
               ]),
           padding: EdgeInsets.all(8),
           child: content,

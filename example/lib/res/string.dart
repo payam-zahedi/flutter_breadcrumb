@@ -1,6 +1,7 @@
 class ExampleStrings{
 
 
-  static String showcases='ShowCases';
+  static const String breadcrumb='Flutter Breadcrumb';
+  static const String showcases='ShowCases';
 
 }

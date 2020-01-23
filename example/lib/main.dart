@@ -1,5 +1,5 @@
 import 'package:example/res/res.dart';
-import 'package:example/screen/showcase.dart';
+import 'package:example/screen/home.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: ExampleColors.background,
         scaffoldBackgroundColor: ExampleColors.background
       ),
-      home: ShowCases(),
+      home: Home(),
     );
   }
 }
