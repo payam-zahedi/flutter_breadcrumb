@@ -1,4 +1,5 @@
 import 'package:example/res/res.dart';
+import 'package:example/screen/showcase.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -8,27 +9,34 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text(ExampleStrings.breadcrumb),
       ),
-      body: Container(
-        margin: EdgeInsets.all(8),
-        child: ListView(
-          children: <Widget>[
-            HomeCard(
-              title: 'ShowCases',
-              subTitle: 'Checkout Showcases that may be usefull for you',
-              onTap: () {},
-            ),
-            HomeCard(
-              title: 'Wrap Behavior',
-              subTitle: 'This example will help you to undestand how wrap overflow behavior works',
-              onTap: () {},
-            ),
-            HomeCard(
-              title: 'Scroll Behavior',
-              subTitle: 'This example will help you to undestand how wrap Scroll behavior works',
-              onTap: () {},
-            ),
-          ],
-        ),
+      body: ListView(
+        padding: EdgeInsets.all(8),
+        children: <Widget>[
+          HomeCard(
+            title: 'ShowCases',
+            subTitle: 'Checkout Showcases that may be usefull for you',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ShowCases(),
+                ),
+              );
+            },
+          ),
+          HomeCard(
+            title: 'Wrap Behavior',
+            subTitle:
+                'This example will help you to undestand how wrap overflow behavior works',
+            onTap: () {},
+          ),
+          HomeCard(
+            title: 'Scroll Behavior',
+            subTitle:
+                'This example will help you to undestand how wrap Scroll behavior works',
+            onTap: () {},
+          ),
+        ],
       ),
     );
   }
