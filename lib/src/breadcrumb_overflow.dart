@@ -81,7 +81,7 @@ class WrapOverflow extends BreadCrumbOverflow {
 
     widgetItems ??= items.map<Widget>(
       (item) => BreadCrumbTile(breadCrumbItem: item),
-    );
+    ).toList();
     return widgetItems;
   }
 
@@ -191,7 +191,7 @@ class ScrollableOverflow extends BreadCrumbOverflow {
 
     widgetItems ??= items.map<Widget>(
       (item) => BreadCrumbTile(breadCrumbItem: item),
-    );
+    ).toList();
     return widgetItems;
   }
 
