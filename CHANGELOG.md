@@ -1,3 +1,10 @@
+# (0.1.0)
+
+first stable version added
+
+- Example completed
+- Readme.md created
+
 # (0.0.1)
 
 Initial version of the package is available
