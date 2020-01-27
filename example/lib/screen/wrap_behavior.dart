@@ -29,25 +29,37 @@ class _WrapBehaviorState extends State<WrapBehavior> {
       appBar: AppBar(
         title: Text(ExampleStrings.wrapBehavior),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        child: BreadCrumb.builder(
-          itemCount: _itemCount,
-          builder: (index) {
-            return BreadCrumbItem(content: Text('Item $index'), onTap: () {});
-          },
-          divider: Icon(
-            Icons.chevron_right,
-            color: Colors.red,
-          ),
-          overflow: WrapOverflow(
-            direction: _isHorizontal ? Axis.horizontal : Axis.vertical,
-            alignment: WrapAlignment.values[_alignment],
-            crossAxisAlignment: WrapCrossAlignment.values[_crossAlignment],
-            verticalDirection: VerticalDirection.values[_verticalDirection],
-            runSpacing: _runSpacing,
-            spacing: _spacing,
-            keepLastDivider: _lastDivider,
+      body: Center(
+        child: Container(
+          margin: EdgeInsets.all(12),
+
+          width: double.infinity,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)
+              ]),
+          padding: EdgeInsets.all(8),
+          child: BreadCrumb.builder(
+            itemCount: _itemCount,
+            builder: (index) {
+              return BreadCrumbItem(content: Text('Item $index'), onTap: () {});
+            },
+            divider: Icon(
+              Icons.chevron_right,
+              color: Colors.red,
+            ),
+            overflow: WrapOverflow(
+              direction: _isHorizontal ? Axis.horizontal : Axis.vertical,
+              alignment: WrapAlignment.values[_alignment],
+              crossAxisAlignment: WrapCrossAlignment.values[_crossAlignment],
+              verticalDirection: VerticalDirection.values[_verticalDirection],
+              runSpacing: _runSpacing,
+              spacing: _spacing,
+              keepLastDivider: _lastDivider,
+            ),
           ),
         ),
       ),
