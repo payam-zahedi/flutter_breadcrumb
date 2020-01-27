@@ -1,4 +1,5 @@
 import 'package:example/res/res.dart';
+import 'package:example/screen/scroll_behavior.dart' as scroll;
 import 'package:example/screen/showcase.dart';
 import 'package:example/screen/wrap_behavior.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,14 @@ class Home extends StatelessWidget {
             title: 'Scroll Behavior',
             subTitle:
                 'This example will help you to undestand how wrap Scroll behavior works',
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => scroll.ScrollBehavior(),
+                ),
+              );
+            },
           ),
         ],
       ),
