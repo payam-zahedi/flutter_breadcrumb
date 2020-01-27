@@ -1,5 +1,6 @@
 import 'package:example/res/res.dart';
 import 'package:example/screen/showcase.dart';
+import 'package:example/screen/wrap_behavior.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -13,7 +14,7 @@ class Home extends StatelessWidget {
         padding: EdgeInsets.all(8),
         children: <Widget>[
           HomeCard(
-            title: 'ShowCases',
+            title: ExampleStrings.showcases,
             subTitle: 'Checkout Showcases that may be usefull for you',
             onTap: () {
               Navigator.push(
@@ -25,10 +26,17 @@ class Home extends StatelessWidget {
             },
           ),
           HomeCard(
-            title: 'Wrap Behavior',
+            title: ExampleStrings.wrapBehavior,
             subTitle:
                 'This example will help you to undestand how wrap overflow behavior works',
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => WrapBehavior(),
+                ),
+              );
+            },
           ),
           HomeCard(
             title: 'Scroll Behavior',
