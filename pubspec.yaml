@@ -7,7 +7,7 @@ homepage: https://github.com/payam-zahedi/flutter_breadcrumb
 author: pzahedi <pzahedi1995@gmail.com>
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.5.0 <3.0.0"
 
 dependencies:
   flutter:
