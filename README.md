@@ -1,7 +1,7 @@
 # flutter_breadcrumb
 [![pub package](https://img.shields.io/pub/v/flutter_breadcrumb?color=blue&style=plastic)](https://pub.dartlang.org/packages/flutter_breadcrumb)
 [![Twitter](https://img.shields.io/twitter/url?color=blue&style=plastic&url=https%3A%2F%2Ftwitter.com%2Fpayam_zahedi)](https://twitter.com/payam_zahedi)
-<br/>
+
 Flutter `Widget` that can easily create `Breadcrumb` in Flutter.
 
 > A breadcrumb or breadcrumb trail is a graphical control element frequently used as a navigational aid in user interfaces and on web pages. It allows users to keep track and maintain awareness of their locations within applications, documents, or websites.
