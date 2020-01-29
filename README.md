@@ -1,5 +1,8 @@
 # flutter_breadcrumb
+[![pub](https://img.shields.io/pub/v/flutter_breadcrumb?color=blue&style=plastic "pub" "pub")](https://pub.dev/packages/flutter_breadcrumb "pub") [![twitter](https://img.shields.io/twitter/url?style=plastic&url=https%3A%2F%2Ftwitter.com%2Fpayam_zahedi)](https://twitter.com/payam_zahedi "twitter")
+<br/>
 Flutter `Widget` that can easily create `Breadcrumb` in Flutter.
+
 > A breadcrumb or breadcrumb trail is a graphical control element frequently used as a navigational aid in user interfaces and on web pages. It allows users to keep track and maintain awareness of their locations within applications, documents, or websites.
 
 ![Flutter Breadcrumb](https://raw.githubusercontent.com/payam-zahedi/flutter_breadcrumb/master/files/image/header.jpg "Flutter Breadcrumb")
@@ -124,3 +127,6 @@ class CustomOverflowBehavior extends BreadCrumbOverflow{
 ##### * override `widgetItems` method to create `List<Widget>` with `items` and `divider` parameters.
 ##### * override `build` method to create your own widget behavior. for example wrap behavior uses `Wrap` widget. and you can use `widgetItems` method in your build method to create `List<Widget>` items.
 ------------
+## Contribution and Support
+#### Feel free for Contributing. your Pull Requests are welcome.
+#### if your like this repo please give a star to it. [![Github star](https://img.shields.io/github/stars/payam-zahedi/flutter_breadcrumb?style=social "github star" "Github star")](https://github.com/payam-zahedi/flutter_breadcrumb "Github star")
