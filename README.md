@@ -130,4 +130,4 @@ class CustomOverflowBehavior extends BreadCrumbOverflow{
 ------------
 ## Contribution and Support
 #### Feel free for Contributing. your Pull Requests are welcome.
-#### if your like this repo please give a star to it. [![Github star](https://img.shields.io/github/stars/payam-zahedi/flutter_breadcrumb?style=social "github star" "Github star")](https://github.com/payam-zahedi/flutter_breadcrumb "Github star")
+#### if your like this repo please give a star to it. [![pub package](https://img.shields.io/github/stars/payam-zahedi/flutter_breadcrumb?style=social)](https://github.com/payam-zahedi/flutter_breadcrumb)
