@@ -1,3 +1,9 @@
+# (0.1.1)
+
+file optimization
+
+- Gif files optimized
+
 # (0.1.0)
 
 first stable version added
