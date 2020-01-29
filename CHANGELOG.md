@@ -1,3 +1,9 @@
+# (0.1.2)
+
+README.md updated
+
+- README.md file bug fixed
+
 # (0.1.1)
 
 file optimization
