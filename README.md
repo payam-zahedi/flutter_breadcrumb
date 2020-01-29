@@ -6,6 +6,18 @@ Flutter `Widget` that can easily create `Breadcrumb` in Flutter.
 ![Flutter Breadcrumb](https://raw.githubusercontent.com/payam-zahedi/flutter_breadcrumb/master/files/image/header.jpg "Flutter Breadcrumb")
 
 
+##Show Cases
+
+| Example  |
+| ------------ |
+| ![Example](https://raw.githubusercontent.com/payam-zahedi/flutter_breadcrumb/master/files/image/example.png "Example")  |
+
+| Show Case   | Wrap Behavior  | Scroll Behavior  |
+| ------------ | ------------ | ------------ |
+| ![showcase](https://github.com/payam-zahedi/flutter_breadcrumb/blob/master/files/gif/showcase.gif?raw=true "showcase")  |  ![wrap behaivor](https://github.com/payam-zahedi/flutter_breadcrumb/blob/master/files/gif/wrap.gif?raw=true "wrap behaivor") | ![scroll behavior](https://github.com/payam-zahedi/flutter_breadcrumb/blob/master/files/gif/scroll.gif?raw=true "scroll behavior")  |
+
+
+
 
 ## Getting Start
 
