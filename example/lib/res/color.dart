@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class ExampleColors {
 
-  static const Color primary = Colors.cyan;
+  static const  colorSwatch = Colors.cyan;
+
+  static const Color primary = colorSwatch;
   static const Color accent = Colors.indigo;
   static const Color background = Color(0xffEDEDED);
 

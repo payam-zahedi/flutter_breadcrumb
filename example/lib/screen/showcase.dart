@@ -6,7 +6,11 @@ import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 class ShowCases extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final titleTextStyle = Theme.of(context).textTheme.title.copyWith(
+    final titleTextStyle = Theme.of(context).textTheme.headline6?.copyWith(
+              color: Colors.black54,
+              fontSize: 16,
+            ) ??
+        TextStyle(
           color: Colors.black54,
           fontSize: 16,
         );
@@ -31,8 +35,7 @@ class ShowCases extends StatelessWidget {
                     content: Text(
                       ExampleConst.breadcrumbs[index],
                       style: TextStyle(
-                        fontWeight:
-                            index < 3 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
                         fontSize: 14,
                       ),
                     ),
@@ -58,8 +61,7 @@ class ShowCases extends StatelessWidget {
                     content: Text(
                       ExampleConst.breadcrumbs[index],
                       style: TextStyle(
-                        fontWeight:
-                            index < 3 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
                       ),
                     ),
                     borderRadius: BorderRadius.circular(4),
@@ -85,9 +87,7 @@ class ShowCases extends StatelessWidget {
                         ? Text(
                             ExampleConst.breadcrumbs[index],
                             style: TextStyle(
-                              fontWeight: index < 3
-                                  ? FontWeight.bold
-                                  : FontWeight.normal,
+                              fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
                             ),
                           )
                         : Row(
@@ -97,9 +97,7 @@ class ShowCases extends StatelessWidget {
                               Text(
                                 ExampleConst.breadcrumbs[index],
                                 style: TextStyle(
-                                  fontWeight: index < 3
-                                      ? FontWeight.bold
-                                      : FontWeight.normal,
+                                  fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
                                 ),
                               ),
                             ],
@@ -152,8 +150,7 @@ class ShowCases extends StatelessWidget {
                     content: Text(
                       ExampleConst.breadcrumbs[index],
                       style: TextStyle(
-                        fontWeight:
-                            index < 3 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
                         fontSize: 14,
                       ),
                     ),
@@ -194,9 +191,7 @@ class ShowCases extends StatelessWidget {
                           child: Text(
                             ExampleConst.breadcrumbs[index],
                             style: TextStyle(
-                              fontWeight: index < 3
-                                  ? FontWeight.bold
-                                  : FontWeight.normal,
+                              fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
                               fontSize: 14,
                             ),
                           ),
@@ -237,8 +232,7 @@ class ShowCases extends StatelessWidget {
                               color: Colors.black12,
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 4, horizontal: 6),
+                            padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),
                             child: Text(
                               '⬤ ⬤ ⬤',
                               style: TextStyle(color: Colors.grey, fontSize: 7),
@@ -279,9 +273,9 @@ class ShowcaseItem extends StatelessWidget {
   final EdgeInsetsGeometry padding;
 
   const ShowcaseItem({
-    Key key,
-    @required this.title,
-    @required this.content,
+    Key? key,
+    required this.title,
+    required this.content,
     this.padding = const EdgeInsets.symmetric(vertical: 6),
   }) : super(key: key);
 
@@ -297,10 +291,7 @@ class ShowcaseItem extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                    offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)
-              ]),
+              boxShadow: [BoxShadow(offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)]),
           padding: EdgeInsets.all(8),
           child: content,
         ),

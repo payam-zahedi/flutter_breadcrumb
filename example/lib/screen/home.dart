@@ -61,12 +61,12 @@ class Home extends StatelessWidget {
 class HomeCard extends StatelessWidget {
   final String title;
   final String subTitle;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   const HomeCard({
-    Key key,
-    @required this.title,
-    @required this.subTitle,
+    Key? key,
+    required this.title,
+    required this.subTitle,
     this.onTap,
   }) : super(key: key);
 

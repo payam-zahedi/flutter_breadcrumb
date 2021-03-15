@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: ExampleStrings.breadcrumb,
       theme: ThemeData(
-        primarySwatch: ExampleColors.primary,
+        primarySwatch: ExampleColors.colorSwatch ,
         accentColor: ExampleColors.accent,
         backgroundColor: ExampleColors.background,
         scaffoldBackgroundColor: ExampleColors.background,
