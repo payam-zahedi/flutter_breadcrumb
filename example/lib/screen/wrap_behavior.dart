@@ -18,8 +18,8 @@ class _WrapBehaviorState extends State<WrapBehavior> {
 
   int _verticalDirection = 1;
 
-  double _runSpacing = 4;
-  double _spacing = 4;
+  final _runSpacing = 4.0;
+  final _spacing = 4.0;
 
   bool _lastDivider = false;
 
@@ -32,15 +32,11 @@ class _WrapBehaviorState extends State<WrapBehavior> {
       body: Center(
         child: Container(
           margin: EdgeInsets.all(12),
-
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                    offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)
-              ]),
+              boxShadow: [BoxShadow(offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)]),
           padding: EdgeInsets.all(8),
           child: BreadCrumb.builder(
             itemCount: _itemCount,
@@ -70,9 +66,10 @@ class _WrapBehaviorState extends State<WrapBehavior> {
         child: Wrap(
           spacing: 4,
           children: <Widget>[
-            FlatButton(
-              child: Icon(Icons.add),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 if (_itemCount < 20) {
                   setState(() {
@@ -80,10 +77,12 @@ class _WrapBehaviorState extends State<WrapBehavior> {
                   });
                 }
               },
+              child: Icon(Icons.add),
             ),
-            FlatButton(
-              child: Icon(Icons.remove),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 if (_itemCount > 0) {
                   setState(() {
@@ -91,10 +90,12 @@ class _WrapBehaviorState extends State<WrapBehavior> {
                   });
                 }
               },
+              child: Icon(Icons.remove),
             ),
-            FlatButton(
-              child: Text('Alignment'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
                   if (_alignment < WrapAlignment.values.length - 1) {
@@ -104,10 +105,12 @@ class _WrapBehaviorState extends State<WrapBehavior> {
                   }
                 });
               },
+              child: Text('Alignment'),
             ),
-            FlatButton(
-              child: Text('CrossAlignment'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
                   if (_crossAlignment < WrapCrossAlignment.values.length - 1) {
@@ -117,38 +120,44 @@ class _WrapBehaviorState extends State<WrapBehavior> {
                   }
                 });
               },
+              child: Text('CrossAlignment'),
             ),
-            FlatButton(
-              child: Text('Direction'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
                   _isHorizontal = !_isHorizontal;
                 });
               },
+              child: Text('Direction'),
             ),
-            FlatButton(
-              child: Text('V-Alignment'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
-                  if (_verticalDirection <
-                      VerticalDirection.values.length - 1) {
+                  if (_verticalDirection < VerticalDirection.values.length - 1) {
                     _verticalDirection++;
                   } else {
                     _verticalDirection = 0;
                   }
                 });
               },
+              child: Text('V-Alignment'),
             ),
-            FlatButton(
-              child: Text('Last Divider'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
                   _lastDivider = !_lastDivider;
                 });
               },
+              child: Text('Last Divider'),
             ),
           ],
         ),

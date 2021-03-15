@@ -29,10 +29,7 @@ class _ScrollBehaviorState extends State<ScrollBehavior> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                    offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)
-              ]),
+              boxShadow: [BoxShadow(offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)]),
           padding: EdgeInsets.all(8),
           child: BreadCrumb.builder(
             itemCount: _itemCount,
@@ -59,9 +56,10 @@ class _ScrollBehaviorState extends State<ScrollBehavior> {
         child: Wrap(
           spacing: 4,
           children: <Widget>[
-            FlatButton(
-              child: Icon(Icons.add),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 if (_itemCount < 20) {
                   setState(() {
@@ -70,10 +68,12 @@ class _ScrollBehaviorState extends State<ScrollBehavior> {
                   _animateToLast();
                 }
               },
+              child: Icon(Icons.add),
             ),
-            FlatButton(
-              child: Icon(Icons.remove),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 if (_itemCount > 0) {
                   setState(() {
@@ -82,47 +82,58 @@ class _ScrollBehaviorState extends State<ScrollBehavior> {
                   _animateToLast();
                 }
               },
+              child: Icon(Icons.remove),
             ),
-            FlatButton(
-              child: Text('Reverse'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
                   _reverse = !_reverse;
                 });
               },
+              child: Text('Reverse'),
             ),
-            FlatButton(
-              child: Text('Direction'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
                   _isHorizontal = !_isHorizontal;
                 });
               },
+              child: Text('Direction'),
             ),
-            FlatButton(
-              child: Text('Move-First'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 _animateToFirst();
               },
+              child: Text('Move-First'),
             ),
-            FlatButton(
-              child: Text('Move-Last'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 _animateToLast();
               },
+              child: Text('Move-Last'),
             ),
-            FlatButton(
-              child: Text('Last Divider'),
-              color: ExampleColors.primary,
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: ExampleColors.primary,
+              ),
               onPressed: () {
                 setState(() {
                   _lastDivider = !_lastDivider;
                 });
               },
+              child: Text('Last Divider'),
             ),
           ],
         ),

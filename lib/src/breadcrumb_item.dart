@@ -25,7 +25,7 @@ class BreadCrumbItem {
     this.disabledTextColor = Colors.black54,
     this.borderRadius = BorderRadius.zero,
     this.border = BorderSide.none,
-  }) ;
+  });
 
   bool get isEnable => onTap != null;
 

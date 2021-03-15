@@ -28,8 +28,7 @@ class Home extends StatelessWidget {
           ),
           HomeCard(
             title: ExampleStrings.wrapBehavior,
-            subTitle:
-                'This example will help you to undestand how wrap overflow behavior works',
+            subTitle: 'This example will help you to undestand how wrap overflow behavior works',
             onTap: () {
               Navigator.push(
                 context,
@@ -41,8 +40,7 @@ class Home extends StatelessWidget {
           ),
           HomeCard(
             title: 'Scroll Behavior',
-            subTitle:
-                'This example will help you to undestand how wrap Scroll behavior works',
+            subTitle: 'This example will help you to undestand how wrap Scroll behavior works',
             onTap: () {
               Navigator.push(
                 context,
