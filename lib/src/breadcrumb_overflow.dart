@@ -16,7 +16,7 @@ abstract class BreadCrumbOverflow {
   Widget build(
     BuildContext context,
     List<BreadCrumbItem> items,
-    Widget divider,
+    Widget? divider,
   );
 }
 
@@ -57,17 +57,16 @@ class WrapOverflow extends BreadCrumbOverflow {
   final double runSpacing;
 
   ///it can be use in horizontal direction to show items in reverse
-  final TextDirection textDirection;
+  final TextDirection? textDirection;
 
   ///it can be use in vertical direction to show items in reverse
   final VerticalDirection verticalDirection;
 
   @override
-  List<Widget> widgetItems(List<BreadCrumbItem> items, Widget divider) {
-    List<Widget> widgetItems;
+  List<Widget> widgetItems(List<BreadCrumbItem> items, Widget? divider) {
+    List<Widget> widgetItems = [];
 
     if (divider != null) {
-      widgetItems = [];
       items.forEach((item) {
         widgetItems.add(
           BreadCrumbTile(breadCrumbItem: item),
@@ -79,9 +78,13 @@ class WrapOverflow extends BreadCrumbOverflow {
       }
     }
 
-    widgetItems ??= items.map<Widget>(
-      (item) => BreadCrumbTile(breadCrumbItem: item),
-    ).toList();
+    if (widgetItems.isEmpty) {
+      widgetItems = items
+          .map<Widget>(
+            (item) => BreadCrumbTile(breadCrumbItem: item),
+          )
+          .toList();
+    }
     return widgetItems;
   }
 
@@ -89,7 +92,7 @@ class WrapOverflow extends BreadCrumbOverflow {
   Widget build(
     BuildContext context,
     List<BreadCrumbItem> items,
-    Widget divider,
+    Widget? divider,
   ) {
     return Wrap(
       children: widgetItems(items, divider),
@@ -138,7 +141,7 @@ class ScrollableOverflow extends BreadCrumbOverflow {
   final bool reverse;
 
   /// The amount of space by which to inset the child.
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
 
   /// An object that can be used to control the position to which this scroll
   /// view is scrolled.
@@ -152,7 +155,7 @@ class ScrollableOverflow extends BreadCrumbOverflow {
   /// [ScrollController.keepScrollOffset]). It can be used to read the current
   /// scroll position (see [ScrollController.offset]), or change it (see
   /// [ScrollController.animateTo]).
-  final ScrollController controller;
+  final ScrollController? controller;
 
   /// Whether this is the primary scroll view associated with the parent
   /// [PrimaryScrollController].
@@ -162,7 +165,7 @@ class ScrollableOverflow extends BreadCrumbOverflow {
   ///
   /// Defaults to true when [scrollDirection] is vertical and [controller] is
   /// not specified.
-  final bool primary;
+  final bool? primary;
 
   /// How the scroll view should respond to user input.
   ///
@@ -170,14 +173,13 @@ class ScrollableOverflow extends BreadCrumbOverflow {
   /// user stops dragging the scroll view.
   ///
   /// Defaults to matching platform conventions.
-  final ScrollPhysics physics;
+  final ScrollPhysics? physics;
 
   @override
-  List<Widget> widgetItems(List<BreadCrumbItem> items, Widget divider) {
-    List<Widget> widgetItems;
+  List<Widget> widgetItems(List<BreadCrumbItem> items, Widget? divider) {
+    List<Widget> widgetItems = [];
 
     if (divider != null) {
-      widgetItems = [];
       items.forEach((item) {
         widgetItems.add(
           BreadCrumbTile(breadCrumbItem: item),
@@ -189,15 +191,18 @@ class ScrollableOverflow extends BreadCrumbOverflow {
       }
     }
 
-    widgetItems ??= items.map<Widget>(
-      (item) => BreadCrumbTile(breadCrumbItem: item),
-    ).toList();
+    if (items.isEmpty) {
+      widgetItems = items
+          .map<Widget>(
+            (item) => BreadCrumbTile(breadCrumbItem: item),
+          )
+          .toList();
+    }
     return widgetItems;
   }
 
   @override
-  Widget build(
-      BuildContext context, List<BreadCrumbItem> items, Widget divider) {
+  Widget build(BuildContext context, List<BreadCrumbItem> items, Widget? divider) {
     final widgetList = widgetItems(items, divider);
     return SingleChildScrollView(
       scrollDirection: direction,
@@ -206,9 +211,8 @@ class ScrollableOverflow extends BreadCrumbOverflow {
       physics: physics,
       primary: primary,
       reverse: reverse,
-      child: direction == Axis.horizontal
-          ? Row(children: widgetList)
-          : Column(children: widgetList),
+      child:
+          direction == Axis.horizontal ? Row(children: widgetList) : Column(children: widgetList),
     );
   }
 }
