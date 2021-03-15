@@ -34,6 +34,7 @@ class WrapOverflow extends BreadCrumbOverflow {
     this.verticalDirection = VerticalDirection.down,
   });
 
+  @override
   final bool keepLastDivider;
 
   /// align children in main direction
@@ -64,7 +65,7 @@ class WrapOverflow extends BreadCrumbOverflow {
 
   @override
   List<Widget> widgetItems(List<BreadCrumbItem> items, Widget? divider) {
-    List<Widget> widgetItems = [];
+    var widgetItems = <Widget>[];
 
     if (divider != null) {
       items.forEach((item) {
@@ -95,7 +96,6 @@ class WrapOverflow extends BreadCrumbOverflow {
     Widget? divider,
   ) {
     return Wrap(
-      children: widgetItems(items, divider),
       crossAxisAlignment: crossAxisAlignment,
       alignment: alignment,
       direction: direction,
@@ -104,6 +104,7 @@ class WrapOverflow extends BreadCrumbOverflow {
       runSpacing: runSpacing,
       textDirection: textDirection,
       spacing: spacing,
+      children: widgetItems(items, divider),
     );
   }
 }
@@ -119,6 +120,7 @@ class ScrollableOverflow extends BreadCrumbOverflow {
     this.physics,
   });
 
+  @override
   final bool keepLastDivider;
 
   /// The direction to use as the main axis.
@@ -177,7 +179,7 @@ class ScrollableOverflow extends BreadCrumbOverflow {
 
   @override
   List<Widget> widgetItems(List<BreadCrumbItem> items, Widget? divider) {
-    List<Widget> widgetItems = [];
+    var widgetItems = <Widget>[];
 
     if (divider != null) {
       items.forEach((item) {
