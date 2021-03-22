@@ -20,7 +20,7 @@ Flutter `Widget` that can easily create `Breadcrumb` in Flutter.
 
 ```dart
 dependencies:
-  flutter_breadcrumb: ^1.0.0
+  flutter_breadcrumb: ^1.0.1
 ```
 
 #### 2. Install packages from the command line

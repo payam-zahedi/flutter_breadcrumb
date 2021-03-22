@@ -1,4 +1,9 @@
 
+# (1.0.1)
+
+- breadCrumbItem issue resolved( [#3](https://github.com/payam-zahedi/flutter_breadcrumb/issues/3) )
+- code reformatted with dart standard line-length
+
 # (1.0.0)
 
 migrating with null-safety
