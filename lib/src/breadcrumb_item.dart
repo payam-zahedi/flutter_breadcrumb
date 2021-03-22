@@ -27,8 +27,6 @@ class BreadCrumbItem {
   final BorderRadiusGeometry borderRadius;
   final BorderSide border;
 
-
-
   bool get isEnable => onTap != null;
 
   @override

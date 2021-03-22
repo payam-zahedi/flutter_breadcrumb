@@ -35,7 +35,8 @@ class ShowCases extends StatelessWidget {
                     content: Text(
                       ExampleConst.breadcrumbs[index],
                       style: TextStyle(
-                        fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight:
+                            index < 3 ? FontWeight.bold : FontWeight.normal,
                         fontSize: 14,
                       ),
                     ),
@@ -54,14 +55,15 @@ class ShowCases extends StatelessWidget {
                 ),
               ),
               ShowcaseItem(
-                title: 'BreadCrumb with Wrapable Overflow content:',
+                title: 'BreadCrumb with Wrap Overflow content:',
                 content: BreadCrumb.builder(
                   itemCount: ExampleConst.breadcrumbs.length,
                   builder: (index) => BreadCrumbItem(
                     content: Text(
                       ExampleConst.breadcrumbs[index],
                       style: TextStyle(
-                        fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight:
+                            index < 3 ? FontWeight.bold : FontWeight.normal,
                       ),
                     ),
                     borderRadius: BorderRadius.circular(4),
@@ -87,7 +89,9 @@ class ShowCases extends StatelessWidget {
                         ? Text(
                             ExampleConst.breadcrumbs[index],
                             style: TextStyle(
-                              fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
+                              fontWeight: index < 3
+                                  ? FontWeight.bold
+                                  : FontWeight.normal,
                             ),
                           )
                         : Row(
@@ -97,7 +101,9 @@ class ShowCases extends StatelessWidget {
                               Text(
                                 ExampleConst.breadcrumbs[index],
                                 style: TextStyle(
-                                  fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
+                                  fontWeight: index < 3
+                                      ? FontWeight.bold
+                                      : FontWeight.normal,
                                 ),
                               ),
                             ],
@@ -150,7 +156,8 @@ class ShowCases extends StatelessWidget {
                     content: Text(
                       ExampleConst.breadcrumbs[index],
                       style: TextStyle(
-                        fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight:
+                            index < 3 ? FontWeight.bold : FontWeight.normal,
                         fontSize: 14,
                       ),
                     ),
@@ -175,7 +182,7 @@ class ShowCases extends StatelessWidget {
                 ),
               ),
               ShowcaseItem(
-                title: 'BreadCrumb with Complecitated Items:',
+                title: 'BreadCrumb with Complicated Items:',
                 content: BreadCrumb.builder(
                   itemCount: ExampleConst.breadcrumbs.length,
                   builder: (index) => BreadCrumbItem(
@@ -191,7 +198,9 @@ class ShowCases extends StatelessWidget {
                           child: Text(
                             ExampleConst.breadcrumbs[index],
                             style: TextStyle(
-                              fontWeight: index < 3 ? FontWeight.bold : FontWeight.normal,
+                              fontWeight: index < 3
+                                  ? FontWeight.bold
+                                  : FontWeight.normal,
                               fontSize: 14,
                             ),
                           ),
@@ -222,7 +231,7 @@ class ShowCases extends StatelessWidget {
                 ),
               ),
               ShowcaseItem(
-                title: 'BreadCrumb with Complecitated Items:',
+                title: 'BreadCrumb with Complicated Items:',
                 content: BreadCrumb.builder(
                   itemCount: ExampleConst.breadcrumbs.length,
                   builder: (index) => BreadCrumbItem(
@@ -232,7 +241,8 @@ class ShowCases extends StatelessWidget {
                               color: Colors.black12,
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 6),
                             child: Text(
                               '⬤ ⬤ ⬤',
                               style: TextStyle(color: Colors.grey, fontSize: 7),
@@ -291,7 +301,10 @@ class ShowcaseItem extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
-              boxShadow: [BoxShadow(offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)]),
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)
+              ]),
           padding: EdgeInsets.all(8),
           child: content,
         ),

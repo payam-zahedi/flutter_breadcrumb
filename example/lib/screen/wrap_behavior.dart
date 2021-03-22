@@ -36,7 +36,10 @@ class _WrapBehaviorState extends State<WrapBehavior> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
-              boxShadow: [BoxShadow(offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)]),
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0, 1), blurRadius: 3, color: Colors.black26)
+              ]),
           padding: EdgeInsets.all(8),
           child: BreadCrumb.builder(
             itemCount: _itemCount,
@@ -139,7 +142,8 @@ class _WrapBehaviorState extends State<WrapBehavior> {
               ),
               onPressed: () {
                 setState(() {
-                  if (_verticalDirection < VerticalDirection.values.length - 1) {
+                  if (_verticalDirection <
+                      VerticalDirection.values.length - 1) {
                     _verticalDirection++;
                   } else {
                     _verticalDirection = 0;
