@@ -4,14 +4,17 @@ import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 class BreadCrumbTile extends StatelessWidget {
   final BreadCrumbItem breadCrumbItem;
 
-  const BreadCrumbTile({Key? key, required this.breadCrumbItem}) : super(key: key);
+  const BreadCrumbTile({Key? key, required this.breadCrumbItem})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: breadCrumbItem.margin,
       child: Material(
-        color: breadCrumbItem.isEnable ? breadCrumbItem.color : breadCrumbItem.disableColor,
+        color: breadCrumbItem.isEnable
+            ? breadCrumbItem.color
+            : breadCrumbItem.disableColor,
         shape: RoundedRectangleBorder(
           borderRadius: breadCrumbItem.borderRadius,
           side: breadCrumbItem.border,
