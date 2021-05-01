@@ -1,6 +1,6 @@
 # flutter_breadcrumb
 [![pub package](https://img.shields.io/pub/v/flutter_breadcrumb?color=blue&style=plastic)](https://pub.dartlang.org/packages/flutter_breadcrumb)
-[![Twitter](https://img.shields.io/twitter/url?color=blue&style=plastic&url=https%3A%2F%2Ftwitter.com%2Fpayam_zahedi)](https://twitter.com/payam_zahedi)
+[![Twitter](https://img.shields.io/twitter/url?color=blue&style=plastic&url=https://twitter.com/payamzahedi95)](https://twitter.com/payamzahedi95)
 
 Flutter `Widget` that can easily create `Breadcrumb` in Flutter.
 
