@@ -2,7 +2,7 @@ import 'package:example/res/res.dart';
 import 'package:example/screen/scroll_behavior.dart' as scroll;
 import 'package:example/screen/showcase.dart';
 import 'package:example/screen/wrap_behavior.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class Home extends StatelessWidget {
   @override

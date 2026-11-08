@@ -1,12 +1,11 @@
-import 'package:example/res/const.dart';
 import 'package:example/res/res.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 
 class ShowCases extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final titleTextStyle = Theme.of(context).textTheme.headline6?.copyWith(
+    final titleTextStyle = Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.black54,
               fontSize: 16,
             ) ??

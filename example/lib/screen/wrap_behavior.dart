@@ -1,5 +1,5 @@
 import 'package:example/res/res.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 
 class WrapBehavior extends StatefulWidget {
@@ -71,7 +71,7 @@ class _WrapBehaviorState extends State<WrapBehavior> {
           children: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
-                primary: ExampleColors.primary,
+                foregroundColor: ExampleColors.primary,
               ),
               onPressed: () {
                 if (_itemCount < 20) {
@@ -84,7 +84,7 @@ class _WrapBehaviorState extends State<WrapBehavior> {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                primary: ExampleColors.primary,
+                foregroundColor: ExampleColors.primary,
               ),
               onPressed: () {
                 if (_itemCount > 0) {
@@ -97,7 +97,7 @@ class _WrapBehaviorState extends State<WrapBehavior> {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                primary: ExampleColors.primary,
+                foregroundColor: ExampleColors.primary,
               ),
               onPressed: () {
                 setState(() {
@@ -112,7 +112,7 @@ class _WrapBehaviorState extends State<WrapBehavior> {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                primary: ExampleColors.primary,
+                foregroundColor: ExampleColors.primary,
               ),
               onPressed: () {
                 setState(() {
@@ -127,7 +127,7 @@ class _WrapBehaviorState extends State<WrapBehavior> {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                primary: ExampleColors.primary,
+                foregroundColor: ExampleColors.primary,
               ),
               onPressed: () {
                 setState(() {
@@ -138,7 +138,7 @@ class _WrapBehaviorState extends State<WrapBehavior> {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                primary: ExampleColors.primary,
+                foregroundColor: ExampleColors.primary,
               ),
               onPressed: () {
                 setState(() {
@@ -154,7 +154,7 @@ class _WrapBehaviorState extends State<WrapBehavior> {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                primary: ExampleColors.primary,
+                foregroundColor: ExampleColors.primary,
               ),
               onPressed: () {
                 setState(() {
