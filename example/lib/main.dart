@@ -1,6 +1,6 @@
 import 'package:example/res/res.dart';
 import 'package:example/screen/home.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,8 +11,11 @@ class MyApp extends StatelessWidget {
       title: ExampleStrings.breadcrumb,
       theme: ThemeData(
         primarySwatch: ExampleColors.colorSwatch,
-        accentColor: ExampleColors.accent,
-        backgroundColor: ExampleColors.background,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: ExampleColors.colorSwatch,
+          accentColor: ExampleColors.accent,
+          backgroundColor: ExampleColors.background
+        ),
         scaffoldBackgroundColor: ExampleColors.background,
         buttonTheme: ButtonThemeData(
           minWidth: 40,
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.dark(),
         ),
         textTheme: TextTheme(
-          button: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          labelLarge: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
       ),
       home: Home(),

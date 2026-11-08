@@ -30,13 +30,13 @@
 build/
 
 # Android related
-**/android/**/gradle-wrapper.jar
-**/android/.gradle
-**/android/captures/
-**/android/gradlew
-**/android/gradlew.bat
-**/android/local.properties
-**/android/**/GeneratedPluginRegistrant.java
+example/android_old/**/gradle-wrapper.jar
+example/android_old/.gradle
+example/android_old/captures/
+example/android_old/gradlew
+example/android_old/gradlew.bat
+example/android_old/local.properties
+example/android_old/**/GeneratedPluginRegistrant.java
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
@@ -44,30 +44,30 @@ build/
 **/ios/**/*.moved-aside
 **/ios/**/*.pbxuser
 **/ios/**/*.perspectivev3
-**/ios/**/*sync/
-**/ios/**/.sconsign.dblite
-**/ios/**/.tags*
-**/ios/**/.vagrant/
-**/ios/**/DerivedData/
-**/ios/**/Icon?
-**/ios/**/Pods/
-**/ios/**/.symlinks/
-**/ios/**/profile
-**/ios/**/xcuserdata
-**/ios/.generated/
-**/ios/Flutter/App.framework
-**/ios/Flutter/Flutter.framework
-**/ios/Flutter/Generated.xcconfig
-**/ios/Flutter/app.flx
-**/ios/Flutter/app.zip
-**/ios/Flutter/flutter_assets/
-**/ios/Flutter/flutter_export_environment.sh
-**/ios/ServiceDefinitions.json
-**/ios/Runner/GeneratedPluginRegistrant.*
+example/ios/**/*sync/
+example/ios/**/.sconsign.dblite
+example/ios/**/.tags*
+example/ios/**/.vagrant/
+example/ios/**/DerivedData/
+example/ios/**/Icon?
+example/ios/**/Pods/
+example/ios/**/.symlinks/
+example/ios/**/profile
+example/ios/**/xcuserdata
+example/ios/.generated/
+example/ios/Flutter/App.framework
+example/ios/Flutter/Flutter.framework
+example/ios/Flutter/Generated.xcconfig
+example/ios/Flutter/app.flx
+example/ios/Flutter/app.zip
+example/ios/Flutter/flutter_assets/
+example/ios/Flutter/flutter_export_environment.sh
+example/ios/ServiceDefinitions.json
+example/ios/Runner/GeneratedPluginRegistrant.*
 
 # Exceptions to above rules.
-!**/ios/**/default.mode1v3
-!**/ios/**/default.mode2v3
-!**/ios/**/default.pbxuser
-!**/ios/**/default.perspectivev3
+!example/ios/**/default.mode1v3
+!example/ios/**/default.mode2v3
+!example/ios/**/default.pbxuser
+!example/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
